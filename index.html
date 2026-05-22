@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Synx Weather App</title>
+    <style>
+        body {
+            background-image: url('images/ocean2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Keeps image still while scrolling */
+        color: white; 
+        font-family: sans-serif; 
+        text-align: center; 
+        padding-top: 50px;
+        margin: 0;
+        height: 100vh;
+    }
+
+    /* 2. Create a "Glass Card" container for your weather content */
+    .weather-card {
+        background: rgba(15, 17, 26, 0.7); /* Dark background with 70% opacity */
+        backdrop-filter: blur(10px);        /* Blurs the ocean waves behind the card */
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle glowing border */
+        
+        max-width: 450px;
+        margin: 0 auto; /* Centers the card horizontally */
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    /* 3. Style the interactive inputs so they pop */
+    input { 
+        padding: 12px; 
+        font-size: 16px; 
+        border-radius: 5px; 
+        border: 1px solid rgba(255, 255, 255, 0.2); 
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        margin: 5px; 
+        width: 60%;
+    }
+    
+    /* Make the input placeholder text visible on dark backgrounds */
+    input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    button { 
+        padding: 12px 20px; 
+        font-size: 16px; 
+        border-radius: 5px; 
+        border: none; 
+        background: #4f46e5; 
+        color: white; 
+        cursor: pointer; 
+        font-weight: bold; 
+        transition: 0.3s ease;
+    }
+
+    button:hover {
+        background: #4338ca;
+    }
+
+    #weather-display { 
+        margin-top: 25px; 
+        font-size: 20px; 
+    }
+    </style>
+</head>
+<body>
+    <body>
+
+    <div class="weather-card">
+        <h1>Synx Weather App</h1>
+        <input type="text" id="city-input" placeholder="Enter city (e.g., Nairobi)">
+        <button id="search-btn">Check Weather</button>
+
+        <div id="weather-display"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</body>
+</html>
